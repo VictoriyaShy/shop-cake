@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="description"
+        content="Изготовление на заказ и доставка по Калининграду и области : торты, прироженное, печень, выпечка !">
+    <meta name="author" content="Виктория Шимановская">
+    <meta name="adress" content="г.Калининград">
+    <meta name="robots" content="index, follow">
+    <meta property="og:site_name" content="WebLuck">
+    <meta property="og:title" content="🧁 Империя вкуса 🧁 Торты-Пироженные-Печенье-Выпечка">
+    <meta property="og:description"
+        content="Для чего нужен свой сайт? Ведение бизнеса только в соц.сетях - это как хождение по тонкому льду ...">
+    <meta property="og:image:url" content="img/link.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webluck.ru">
+
+        <title>🧁 Империя вкуса 🧁 Торты-Пироженные-Печенье-Выпечка 🧁 Доставка Калининград и область 🧁</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-galery.css">
+
+    <link rel="icon" href="images/cake.svg" type="image/svg">
+</head>
+
+<div class="cart">
+  <h2>Корзина</h2>
+  <ul id="cart-items"></ul>
+  <p id="total-price">Общая сумма: 0 ₽</p>
+
+  <fieldset class="fieldset">
+      <legend>Оформить он-лайн заявку </legend>
+      <form action="submit_order.php" method="post">
+
+
+          <label for="name"> Заказчкик : <input id="name" type="text" name="name"
+                  pattern="[a-zA-ZА-Яа-я0-9+-., !?*]{3,30}" maxlength="30" title="как к Вам обращаться?" required
+                  placeholder=" ИП Фамилия И.О. / ООО Название" autocapitalize="words"></label>
+
+          <label for="phone">Телефон <input id="phone" type="phone" name="phone" title="введите телефон для связи "
+                  pattern="[0-9+]{9,12}" value="+7" maxlength="12" required> </label>
+          <label for="email">Введите Ваш email для подтверждения заказа:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="address">Укажите точный адрес и название магазина:</label><br>
+          <textarea id="address" name="address" pattern="[a-zA-ZА-Яа-я0-9+-.,  !?*]{1,100}" maxlength="200" placeholder="насел.пункт, улица, дом, этаж, магазин" required></textarea>
+          <label for="city">Выберите город или район из списка:</label><br>
+          <select id="city" name="city" required>
+              <option value="Калининград">Калининград</option>
+              <option value="Багратионовск">Багратионовск</option>
+              <option value="Балтийск">Балтийск</option>
+              <option value="Гвардейск">Гвардейск</option>
+              <option value="Гурьевск">Гурьевск</option>
+              <option value="Гусев">Гусев</option>
+              <option value="Железнодорожный">Железнодорожный</option>
+              <option value="Зеленоградск">Зеленоградск</option>
+              <option value="Краснознаменск">Краснознаменск</option>
+              <option value="Ладушкин">Ладушкин</option>
+              <option value="Мамоново">Мамоново</option>
+              <option value="Нестеров">Нестеров</option>
+              <option value="Полесск">Полесск</option>
+              <option value="Правдинск">Правдинск</option>
+              <option value="Светлогорск">Светлогорск</option>
+              <option value="Светлый">Светлый</option>
+              <option value="Славск">Славск</option>
+              <option value="Советск">Советск</option>
+              <option value="Черняховск">Черняховск</option>
+              <option value="Янтарный">Янтарный</option>
+              <option value="любой">Другое</option>
+              <!-- Добавьте другие города здесь -->
+          </select><br>
+
+
+
+          <label for="comment" title="Допустимые буквы и символы: A-z А-я 0-9 + - . , !?"> 
+              <textarea id="comment" name="comment" pattern="[a-zA-ZА-Яа-я0-9+-.,  !?*]{1,100}" maxlength="500"
+                  placeholder="Ваш комментарий к заказу"></textarea></label>
+
+
+<!-- Скрытый чек-бокс для защиты от спам-ботов -->
+<input type="checkbox" name="spam_checkbox" id="spam_checkbox" style="display: none" >
+
+
+          <input type="hidden" id="cart-content" name="cartContent">
+          <input type="submit" value="Отправить заказ">
+      </form>
+  </fieldset>
+</div>
+
+</html>
